@@ -32,6 +32,32 @@
     <script src="https://unpkg.com/@zegocloud/zego-uikit-prebuilt/zego-uikit-prebuilt.js"></script>
     <script>
         window.onload = function () {
+            let userCount = 0; // Initialize user count
+
+        //     function updateCount(count) {
+        // userCount = count; // Update user count
+        // console.log(`User count: ${userCount}`);
+        // if (userCount === 0) {
+        //     // Make an AJAX request to delete the VideoCall instance
+        //     deleteVideoCall();
+        // }
+    // }
+
+    // function deleteVideoCall() {
+    //     // Make an AJAX request to delete the VideoCall instance
+    //     const xhr = new XMLHttpRequest();
+    //     xhr.open('DELETE', 'delete_videocall/', true);
+    //     xhr.setRequestHeader('Content-Type', 'application/json');
+    //     xhr.onload = function () {
+    //         if (xhr.status === 200) {
+    //             console.log('VideoCall instance deleted successfully');
+    //         } else {
+    //             console.error('Failed to delete VideoCall instance');
+    //         }
+    //     };
+    //     xhr.send();
+    // }
+
             function getUrlParams(url) {
                 let urlStr = url.split('?')[1];
                 const urlSearchParams = new URLSearchParams(urlStr);
@@ -39,7 +65,6 @@
                 return result;
             }
 
-            //const roomID = getUrlParams(window.location.href)['roomID'] || (Math.floor(Math.random() * 10000) + "");
             const roomID = getUrlParams(window.location.href)['roomID'] || "{{id}}";
             const userID = Math.floor(Math.random() * 10000) + "";
             const userName = "{{name}}";
@@ -69,6 +94,15 @@
                 layout: "Grid",
                 showLayoutButton: true,
 
+                // // Callback for when a user joins the room
+                // onJoinRoom: () => {
+                //     updateCount(userCount + 1); // Increment user count
+                // },
+
+                // // Callback for when a user leaves the room
+                // onLeaveRoom: () => {
+                //     updateCount(userCount - 1); // Decrement user count
+                // }
             });
 
             // Added Back button dynamically
@@ -77,7 +111,51 @@
             backButton.setAttribute('class', 'back-button');
             backButton.textContent = 'Back';
             document.body.appendChild(backButton);
+
+            // // Event listener for when the back button is clicked
+            // backButton.addEventListener('click', () => {
+            //     userCount--; // Decrement the user count
+            //     console.log(`User count: ${userCount}`);
+            // });
+
+            // // Event listener for when the window is closed
+            // window.addEventListener('beforeunload', () => {
+            //     userCount--; // Decrement the user count
+            //     console.log(`User count: ${userCount}`);
+            // });
         }
+
+        function updateCount(count) {
+    userCount = count; // Update user count
+    console.log(`User count: ${userCount}`);
+    if (userCount === 0) {
+        // Make a POST request to delete empty VideoCall instances
+        deleteEmptyVideoCalls();
+    }
+}
+
+// function deleteEmptyVideoCalls() {
+//     const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+//     fetch('/delete_empty_videocalls/', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//             // Include CSRF token if required
+//             'X-CSRFToken':csrftoken, // Implement getCSRFToken() as needed
+//         },
+//     })
+//     .then(response => {
+//         if (!response.ok) {
+//             throw new Error('Failed to delete empty VideoCall instances');
+//         }
+//         console.log('Empty VideoCall instances deleted successfully');
+//     })
+//     .catch(error => {
+//         console.error(error.message);
+//     });
+// }
+
     </script>
 </body>
 

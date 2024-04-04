@@ -1,21 +1,57 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Video Conference</title>
-  <link rel="stylesheet" href="{% static 'style.css' %}">
-  <body>
+  <title>Video Conference Dashboard</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #000000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dashboard {
+        width: 80%;
+        margin: 50px auto;
+        text-align: center;
+    }
+
+    h1 {
+        color: #000000;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #000000;
+        color: #ffffff;
+        transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: #333333;
+    }
+  </style>
+</head>
+<body>
     <div class="dashboard">
         <h1>Welcome, {{name}}!</h1>
         <!-- create a "New Meeting" button -->
         <a href="{% url 'meeting' %}" class="button">New Meeting</a>
         <a href="{% url 'join_room' %}" class="button">Join Meeting</a>
-        <a href="{% url 'logout' %}" class="button .logout-button">Logout</a>
+        <a href="{% url 'update_profile' %}" class="button">Update Profile</a>
+        <a href="{% url 'logout' %}" class="button logout-button">Logout</a>
+        <!-- Add button to update profile -->
     </div>
-  </body>
-</head>
+</body>
 </html>

@@ -55,6 +55,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'LetsMeet.urls'
 
+
+AUTHENTICATION_BACKENDS = [
+    'LetsMeet.authentication.EmailBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

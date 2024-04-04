@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 
+
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     email = models.EmailField(default='')
@@ -24,3 +25,4 @@ class Participant(models.Model):
 
     def __str__(self):
         return f'{self.user.username} - {self.video_call.meeting_id}'
+
