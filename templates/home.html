@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Meet - Video Calling App</title>
+    <link rel="stylesheet" href="{% static 'homeStyle.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var testimonials = $('.testimonial-slider');
+        var width = $('.testimonial').width();
+        var sliderPos = 0;
+
+        function slideTestimonials() {
+            sliderPos -= width;
+            if (sliderPos < -width * (testimonials.children().length - 1)) {
+                sliderPos = 0;
+            }
+            testimonials.css('transform', 'translateX(' + sliderPos + 'px)');
+        }
+
+        setInterval(slideTestimonials, 3000); // Change slide interval as needed
+    });
+</script>
+
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Let's Meet</h1>
+            <p>Stay Connected, Anywhere, Anytime</p>
+            <img src="{% static 'video_calling_illustration.png' %}" alt="Video Calling Illustration" width="400">
+
+        </header>
+        
+        <section class="features">
+            <div class="feature">
+                <h2>High-Quality Video Calls</h2>
+                <p>Experience crystal-clear video calls with your friends and family.</p>
+            </div>
+            <div class="feature">
+                <h2>Seamless Connection</h2>
+                <p>Connect instantly without any interruptions or delays.</p>
+            </div>
+            <div class="feature">
+                <h2>Cross-Platform Compatibility</h2>
+                <p>Available on all devices - smartphones, tablets, and desktops.</p>
+            </div>
+            <div class="feature">
+                <h2>Secure Encryption</h2>
+                <p>Your privacy is our top priority. Enjoy encrypted video calls.</p>
+            </div>
+        </section>
+
+        <div class="cta-buttons">
+            <a href="/register" class="download-btn">Signup</a>
+            <a href="/login" class="download-btn">Login</a>
+        </div>
+
+        <section class="testimonials">
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Let's Meet made connecting with my loved ones effortless!"</p>
+                        <span class="testimonial-author">- Jane Doe</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Finally, a video calling app that just works!"</p>
+                        <span class="testimonial-author">- John Smith</span>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <span class="testimonial-author">- Jane Doe</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perferendis itaque iste, sint placeat pariatur.</p>
+                        <span class="testimonial-author">- John Smith</span>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <span class="testimonial-author">- Jane Doe</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perferendis itaque iste, sint placeat pariatur.</p>
+                        <span class="testimonial-author">- John Smith</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <span class="testimonial-author">- Jane Doe</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perferendis itaque iste, sint placeat pariatur.</p>
+                        <span class="testimonial-author">- John Smith</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <span class="testimonial-author">- Jane Doe</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perferendis itaque iste, sint placeat pariatur.</p>
+                        <span class="testimonial-author">- John Smith</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+            <p>Copyright © 2024 Let's Meet. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

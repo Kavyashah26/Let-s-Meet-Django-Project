@@ -1,0 +1,187 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  width: 100%;
+  background: #f9f9f9; /* Changed background color to a subtle shade of gray */
+}
+
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 430px;
+  width: 100%;
+  background: #fff; /* Changed background color to white */
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1); /* Reduced box shadow intensity */
+}
+
+.container .form{
+  padding: 2rem;
+}
+
+.form header{
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form input{
+  height: 60px;
+  width: 100%;
+  padding: 0 15px;
+  font-size: 17px;
+  margin-bottom: 1.3rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form input:focus{
+  box-shadow: 0 1px 0 rgba(0,0,0,0.1); /* Reduced focus shadow intensity */
+}
+
+.form a{
+  font-size: 16px;
+  color: #009579;
+  text-decoration: none;
+}
+
+.form a:hover{
+  text-decoration: underline;
+}
+
+.form input.button{
+  color: #fff;
+  background: #000; /* Changed button color to black */
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 1.7rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.form input.button:hover{
+  background: #333; /* Changed button hover color to a darker shade */
+}
+
+.signup{
+  font-size: 17px;
+  text-align: center;
+}
+
+.signup label{
+  color: #009579;
+  cursor: pointer;
+}
+
+.signup label:hover{
+  text-decoration: underline;
+}
+
+/* Center the div with class name 'intro' */
+.intro {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Set the background color to white */
+.intro {
+  background-color: #fff;
+}
+
+/* Make the text inside the div with class name intro look bold and attractive */
+.intro h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Center the h2 tag inside the div with class name intro */
+.intro h2 {
+  text-align: center;
+}
+
+/* Vertically align the div with class name intro to the center of the page */
+.intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Make the buttons inside the div with class name intro look attractive */
+.intro a {
+  background-color: #000; /* Changed button color to black */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Center the buttons inside the div with class name intro */
+.intro a {
+  margin-top: 7px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Make the buttons inside the div with class name intro look attractive when hovered */
+.intro a:hover {
+  background-color: #333; /* Changed button hover color to a darker shade */
+}
+
+/* Center the div named dashboard */
+.dashboard {
+  margin: auto;
+  padding: 20px; /* Increased padding for better spacing */
+  background-color: #000; /* Black background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  text-align: center; /* Center aligning the content */
+}
+
+.dashboard h1 {
+  font-size: 30px; /* Slightly reduced font size for better fit */
+  font-weight: bold;
+  margin-bottom: 20px; /* Increased bottom margin for better separation */
+  color: #fff; /* White text color for contrast */
+}
+
+.dashboard a {
+  background-color: #333; /* Dark gray button color */
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 10px; /* Uniform margin between buttons */
+  border-radius: 5px; /* Rounded button corners */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.dashboard a:hover {
+  background-color: #555; /* Darker gray on hover */
+}
