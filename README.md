@@ -47,7 +47,8 @@ This Django project implements a video calling solution using the Zego Cloud SDK
 
 ### Project Structure
 
-*   `letsmeet`: The main Django app containing models, views, and templates.
+*   `baseapp`: The main Django app containing models, views, and templates.
+*   `LetsMeet`: The Django app that redirects all work to baseapp .
 *   `templates`: HTML templates for the user interface.
 *   `static`: Static files such as CSS and JavaScript.
 
